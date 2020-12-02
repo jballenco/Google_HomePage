@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
   <style>
-    #NavigationBarTop{
+    .NavigationBar{
       width:auto;
       height:auto;
+    }
+    #BottomNavigationBar{
+      position: fixed;
+      bottom:0;
+      line-height:40px;
+      width:100%;
+      font-family: arial,sans-serif;
+      font-size: 14px;
+      background-color: #f2f2f2;
+      color: #70757a;
     }
     ul {
       list-style-type: none;
@@ -21,7 +31,7 @@
       text-align: center;
       padding-left: 15px;
       text-decoration: none;
-      font-size:13px;
+      font-size:14px;
       font-family:arial,sans-serif;
       margin: 7px 0 0 10px;
       opacity: 0.75;
@@ -69,15 +79,32 @@
       align-items:center;
       justify-content:center;
     }
+    button {
+      padding: 0 16px 0 16px;
+      border: 1px solid #f8f9fa;
+      background-color: #e2e4e7;
+      color:#202124;
+      margin: 11px 4px 11px 4px;
+      border-radius: 4px;
+      font-family: arial, sans-serif;
+      font-size:14px;
+      line-height: 27px;
+      height: 36px;
+      min-width: 54px;
+      text-align:Center;
+    }
+    button:hover {
+      border: 1px solid #d3d6d8;
+    }
   </style>
     <body>
-        <div class="Navigation Bar" id="NavigationBarTop">
+        <div class="NavigationBar" id="NavigationBarTop">
             <ul>
               <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
               <li><a href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
-              <li style="float:right;" ><a href="#"><img src="GoogleAppsIcon.png" style="margin:auto 7px 0 auto;vertical-align:middle;opacity:0.75"></a></li>
-              <li style="float:right"><a href="#">Images</a></li>
-              <li style="float:right"><a href="#">Gmail</a></li>
+              <li style="float:right;" ><a href="https://www.google.com/intl/en/about/products?tab=wh"><img src="GoogleAppsIcon.png" style="margin:auto 7px 0 auto;vertical-align:middle;opacity:0.75"></a></li>
+              <li style="float:right;"><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
+              <li style="float:right;"><a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a></li>
             </ul>
         </div>
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="googlelogo">
@@ -92,10 +119,21 @@
               <input type="text" id="GoogleSearchBox"> 
           </form>
         </div>
-        <div id="SearchButtonsContainer"
+        <div id="SearchButtonsContainer">
           <form>
             <button id="search">Google Search</button><button id="FeelingLucky">I'm Feeling Lucky</button>
           </form>
-        
+        </div>
+        <div id="FooterSpace" style="min-width:400px"></div>
+        <div class="NavigationBar" id="BottomNavigationBar">
+            <ul>
+              <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjj_d2Vva_tAhUUBs0KHa58AX0QkdQCCBY&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_us%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3XLzhicA5ZZW0afDbW0l2T">Advertising</a></li>
+              <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjj_d2Vva_tAhUUBs0KHa58AX0QktQCCBc&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a></li>
+              <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></li>
+              <li style="float:right;padding-right:15px;margin-right:10px"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjj_d2Vva_tAhUUBs0KHa58AX0Qzq0CCBQ&url=https%3A%2F%2Fwww.google.com%2Fpreferences%3Fhl%3Den%26client%3Dsafari&usg=AOvVaw0EdGNytfLu01w-9rMmX_eZ">Settings</a></li>
+              <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjj_d2Vva_tAhUUBs0KHa58AX0Q8qwCCBM&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den%26fg%3D1&usg=AOvVaw2d8Ahs2oc0jxVOgPfpr4Fe">Terms</a></li>
+              <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjj_d2Vva_tAhUUBs0KHa58AX0Q8awCCBI&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den%26fg%3D1&usg=AOvVaw25lN6TjyY2uszSImdhMejE">Privacy</a></li>
+            </ul>
+        </div>
     </body>
 </html>
